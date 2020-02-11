@@ -12,8 +12,8 @@
 ![](./img/fig5.png)
 
 ### Summing multiple neurons allows us to apply multiple partitions
-![](./img/fig5.png)
+![](./img/fig6.png)
 
 
 ### In practise, we use continous functions which approximate the step function
-![](./img/fig6.png)
+![](./img/fig8.png)
