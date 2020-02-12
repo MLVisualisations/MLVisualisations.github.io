@@ -1,4 +1,5 @@
 import numpy as np
+np.random.seed(0)
 import matplotlib.pyplot as plt
 from scipy import stats
 plt.style.use('fast')
@@ -170,9 +171,9 @@ for i, x in enumerate(lx):
             D1[i, j] += 1
         if step(-x - y + 0.71):
             D1[i, j] += 1
-        if step(x - y + 0.71):
+        if step(-x + y + 0.71):
             D1[i, j] += 1
-        if step(-x + y - 0.71):
+        if step(x - y + 0.71):
             D1[i, j] += 1
 axes.imshow(D1, extent = [-1, 1, -1, 1], cmap=plt.get_cmap('Greys'), aspect = 1)
 plt.savefig('img/fig8')

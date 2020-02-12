@@ -17,7 +17,7 @@
 ![](./img/fig7.png)
 ![](./img/fig8.png)
 ### This result is known as the 'Universal Approximation Theorem'. The problem is, we could need many partitions.
-
+![](./img/fig9.png)
 
 ### In practise, we use continous functions which approximate the step function
-![](./img/fig8.png)
+![](./img/fig10.png)
