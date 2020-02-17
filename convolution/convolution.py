@@ -99,3 +99,11 @@ filter = -1*np.ones((3, 3))
 filter[1,1] = 8
 plt.imshow(convolve2d(bw_cat_image, filter, mode='same'), cmap='gray')
 plt.savefig('img/fig10')
+
+#############
+# Figure 11
+#############
+#Random convolve
+filter = np.random.randn(9, 9)
+plt.imshow(convolve2d(bw_cat_image, filter, mode='same'), cmap='gray')
+plt.savefig('img/fig11')
