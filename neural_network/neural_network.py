@@ -85,13 +85,13 @@ for i, x in enumerate(lx):
             D3[i, j] = 1
         if step(-x + 2*y+ 0.4):
             D4[i, j] = 1
-ax1.imshow(D1, extent = [-1, 1, -1, 1], cmap=plt.get_cmap('Greys'), aspect = 1)
+ax1.imshow(D1, extent = [-1, 1, -1, 1], cmap=plt.get_cmap('Pastel1'), aspect = 1)
 ax1.title.set_text('$\sigma(x + 0.4)$')
-ax2.imshow(D2, extent = [-1, 1, -1, 1], cmap=plt.get_cmap('Greys'), aspect = 1)
+ax2.imshow(D2, extent = [-1, 1, -1, 1], cmap=plt.get_cmap('Pastel1'), aspect = 1)
 ax2.title.set_text('$\sigma(x + y + 0.4)$')
-ax3.imshow(D3, extent = [-1, 1, -1, 1], cmap=plt.get_cmap('Greys'), aspect = 1)
+ax3.imshow(D3, extent = [-1, 1, -1, 1], cmap=plt.get_cmap('Pastel1'), aspect = 1)
 ax3.title.set_text('$\sigma(2x - y + 0.4)$')
-ax4.imshow(D4, extent = [-1, 1, -1, 1], cmap=plt.get_cmap('Greys'), aspect = 1)
+ax4.imshow(D4, extent = [-1, 1, -1, 1], cmap=plt.get_cmap('Pastel1'), aspect = 1)
 ax4.title.set_text('$\sigma(-x + 2y + 0.4)$')
 plt.savefig('img/fig5')
 
@@ -118,9 +118,9 @@ for i, x in enumerate(lx):
         if step(x):
             D2[i, j] += 1
 
-ax1.imshow(D1, extent = [-1, 1, -1, 1], cmap=plt.get_cmap('Greys'), aspect = 1)
+ax1.imshow(D1, extent = [-1, 1, -1, 1], cmap=plt.get_cmap('Pastel1'), aspect = 1)
 ax1.title.set_text('$\sigma(x) + \sigma(x+y)$')
-ax2.imshow(D2, extent = [-1, 1, -1, 1], cmap=plt.get_cmap('Greys'), aspect = 1)
+ax2.imshow(D2, extent = [-1, 1, -1, 1], cmap=plt.get_cmap('Pastel1'), aspect = 1)
 ax2.title.set_text('$\sigma(-x + 2y + 0.4) + \sigma(x + y + 0.4) + \sigma(x)$')
 plt.savefig('img/fig6')
 
@@ -144,7 +144,7 @@ for i, x in enumerate(lx):
             D1[i, j] += 1
         if step(-y + 0.5):
             D1[i, j] += 1
-axes.imshow(D1, extent = [-1, 1, -1, 1], cmap=plt.get_cmap('Greys'), aspect = 1)
+axes.imshow(D1, extent = [-1, 1, -1, 1], cmap=plt.get_cmap('Pastel1'), aspect = 1)
 plt.savefig('img/fig7')
 
 #############
@@ -175,7 +175,7 @@ for i, x in enumerate(lx):
             D1[i, j] += 1
         if step(x - y + 0.71):
             D1[i, j] += 1
-axes.imshow(D1, extent = [-1, 1, -1, 1], cmap=plt.get_cmap('Greys'), aspect = 1)
+axes.imshow(D1, extent = [-1, 1, -1, 1], cmap=plt.get_cmap('Pastel1'), aspect = 1)
 plt.savefig('img/fig8')
 
 #############

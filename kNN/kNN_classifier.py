@@ -56,7 +56,7 @@ for i, x in enumerate(np.linspace(0, 1, 100)):
                 min_dist = d
                 allocated_class = label[k]
         # Plot
-        if allocated_class == 1:
+        if allocated_class == 0:
             D[j, i] = 1
 
 for i, val in enumerate(label):
@@ -100,7 +100,7 @@ for i, x in enumerate(np.linspace(0, 1, 100)):
 
         # Plot
         list_mode = stats.mode(allocated_class.tolist())
-        if list_mode[0] == [1]:
+        if list_mode[0] == [0]:
             D[j, i] = 1
 
 for i, val in enumerate(label):
@@ -137,7 +137,7 @@ for i, x in enumerate(np.linspace(0, 1, 100)):
 
         # Plot
         list_mode = stats.mode(allocated_class.tolist())
-        if list_mode[0] == [1]:
+        if list_mode[0] == [0]:
             D[j, i] = 1
 
 for i, val in enumerate(label):
@@ -187,5 +187,5 @@ plt.savefig('img/fig10')
 #############
 # Figure 11
 #############
-axes.plot([0, 0.2, 0.2, 0, 0], [0.7, 0.7, 1, 1, 0.7], 'g')
+axes.plot([0, 0.3, 0.3, 0, 0], [0.75, 0.75, 1, 1, 0.75], 'g')
 plt.savefig('img/fig11')
