@@ -14,10 +14,9 @@
 ![](./img/fig6.png)
 ### And the output is a vector equal to number of neurons:
 ![](./img/fig7.png)
-### We can represent this space as node on a hypercube:
+### We can represent the new space as node on a hypercube:
 ![](./img/fig8.png)
-### We could add an additional layer to partition this space.
-### Alternatively, we could sum the output of multiple neurons:
+### We can add an additional layer to partition this new space. Alternatively, we could sum the output of multiple neurons:
 ![](./img/fig9.png)
 ### This combines regions:
 ![](./img/fig10.png)
