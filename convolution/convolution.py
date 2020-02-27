@@ -96,7 +96,7 @@ plt.savefig('img/fig9')
 #############
 # All edges lines
 filter = -1*np.ones((3, 3))
-filter[1,1] = 8
+filter[1,1] = 9
 plt.imshow(convolve2d(bw_cat_image, filter, mode='same'), cmap='gray')
 plt.savefig('img/fig10')
 
