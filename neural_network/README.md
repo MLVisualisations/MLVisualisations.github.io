@@ -32,6 +32,6 @@
 ### In practise, we use continous functions which approximate the step function
 ![](./img/fig15.png)
 ![](./img/fig16.png)
-### And now the regions become less distinct
+### And now the regions become less distinct and so it makes more sense to have deeper networks
 ![](./img/fig17.png)
 ![](./img/fig18.png)

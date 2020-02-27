@@ -236,10 +236,10 @@ plt.savefig('img/fig13')
 fig, axes = plt.subplots(ncols=1, nrows=1)
 lx = np.linspace(-0.5, 0.5, 11)
 ly = np.linspace(-0.5, 0.5, 11)
-colors = ['r', 'b', 'g', 'y']
+colors = ['r', 'b']
 for x in lx:
     for y in ly:
-        axes.plot(x, y, 'x', color=colors[np.random.randint(4)])
+        axes.plot(x, y, 'x', color=colors[np.random.randint(2)])
 
 for x in lx:
     axes.plot([x-0.05, x-0.05], [-1, 1], 'k')
