@@ -326,26 +326,18 @@ fig.colorbar(pos, ax=axes[0:2], shrink=1)
 plt.savefig('img/fig20')
 
 
-"""
-#############
-# Figure 20
-#############
-fig, ax = plt.subplots(ncols=1, nrows=1)
-for i, x in enumerate(np.linspace(0.1, 0.9, 9)):
-    for j, y in enumerate(np.linspace(0.1, 0.9, 9)):
-        label = (j)*9 + i
-        #ax.plot(x, y, 'xk')
-        ax.text(x, y, str(label))
-plt.savefig('img/fig20')
-
 #############
 # Figure 21
 #############
-fig, ax = plt.subplots(ncols=1, nrows=1)
-for i, x in enumerate(np.linspace(0.1, 0.9, 9)):
-    for j, y in enumerate(np.linspace(0.1, 0.9, 9)):
-        label = (j)*9 + i
-        #ax.plot(x, y, 'xk')
-        ax.text(x, y, str(label))
-plt.savefig('img/fig20')
-"""
+N = 50
+fig, (ax1, ax2) = plt.subplots(ncols=2, nrows=1, figsize=(8,4))
+for x in np.linspace(-4, 4, N):
+    for y in np.linspace(-4, 4, N):
+        ax1.plot(x, y, 'o', color=(x/8 + 0.5, y/8 +0.5, 0))
+ax1.plot([-4, 4], [-4, 4], 'k')
+ax1.plot([-4, 4], [2, -2], 'k')
+for x in np.linspace(-4, 4, N):
+    for y in np.linspace(-4, 4, N):
+        ax2.plot(sigmoid(2*x - y), sigmoid(x + y), 'o', color=(x/8 + 0.5, y/8 +0.5, 0))
+plt.suptitle('$[x, y] -> [\sigma(2x - y), \sigma(x + y)]$')
+plt.savefig('img/fig21')

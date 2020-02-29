@@ -4,43 +4,105 @@
 <p align="center">
   <img width="460" height="460" src="./img/fig1.png">
 </p>
+
 ### Inside the neuron we take a linear combination of the inputs, add a bias, and apply a (nonlinear) activation function:
-![](./img/fig2.png)
+<p align="center">
+  <img width="460" height="460" src="./img/fig2.png">
+</p>
+
 ### The activation function behaves like a switch:
-![](./img/fig3.png)
+<p align="center">
+  <img width="460" height="460" src="./img/fig3.png">
+</p>
+
 ### And so a single neuron simply partitions the vector space. The weights control the direction of the partition:
-![](./img/fig4.png)
+<p align="center">
+  <img width="460" height="460" src="./img/fig4.png">
+</p>
+
 ### And the bias applies a shift:
-![](./img/fig5.png)
+<p align="center">
+  <img width="460" height="460" src="./img/fig5.png">
+</p>
+
 ### To create more partitions, we need more neurons:
-![](./img/fig6.png)
+<p align="center">
+  <img width="460" height="460" src="./img/fig6.png">
+</p>
+
 ### But now the output is a vector equal to number of neurons:
-![](./img/fig7.png)
+<p align="center">
+  <img width="460" height="460" src="./img/fig7.png">
+</p>
+
 ### We can represent the new space as node on a hypercube:
-![](./img/fig8.png)
+<p align="center">
+  <img width="460" height="460" src="./img/fig8.png">
+</p>
+
 ### An additional layer can be used to partition this new space.
-![](./img/fig9.png)
+<p align="center">
+  <img width="460" height="460" src="./img/fig9.png">
+</p>
+
 ### And the output of this second layer is again a hyperplane:
-![](./img/fig10.png)
+<p align="center">
+  <img width="460" height="460" src="./img/fig10.png">
+</p>
+
 ### The isolated datapoint [0,1] represents a full region in the first layer:
-![](./img/fig11.png)
+<p align="center">
+  <img width="460" height="460" src="./img/fig11.png">
+</p>
 
 ### Consider the following classification problem:
-![](./img/fig12.png)
+<p align="center">
+  <img width="460" height="460" src="./img/fig12.png">
+</p>
+
 ### We need three hyperplanes to separate the regions (3 neurons):
-![](./img/fig13.png)
+<p align="center">
+  <img width="460" height="460" src="./img/fig13.png">
+</p>
+
 ### The output is three dimensional:
-![](./img/fig14.png)
+<p align="center">
+  <img width="460" height="460" src="./img/fig14.png">
+</p>
+
 ### We can visualise these points on a three dimensional hypercube where we can color the nodes according to their class:
-![](./img/fig15.png)
+<p align="center">
+  <img width="460" height="460" src="./img/fig15.png">
+</p>
+
 ### A single neuron in a second layer can isolate the blue from the red:
-![](./img/fig16.png)
+<p align="center">
+  <img width="460" height="460" src="./img/fig16.png">
+</p>
+
 ### Which corresponds to the following partition:
-![](./img/fig17.png)
+<p align="center">
+  <img width="460" height="460" src="./img/fig17.png">
+</p>
+
 ### As we have shown, when using a step function, the first layer divides the space into regions. Two points in the same region are indistinguishable. And the second layer merges regions.
 
 ### As the classification problem gets more difficult, we need more neurons:
-![](./img/fig18.png)
+<p align="center">
+  <img width="460" height="460" src="./img/fig18.png">
+</p>
+
 ### And this is only a 2 dimensional problem. In practise, we use continous functions instead of the step function:
-![](./img/fig19.png)
-### The region is no longer mapped to two distinct points, and so subsequent layers do a lot more.
+<p align="center">
+  <img width="460" height="460" src="./img/fig19.png">
+</p>
+
+### The region is no longer mapped to two distinct points, and so subsequent layers do a lot more. Visualising the output of a single neuron is easy:
+<p align="center">
+  <img width="460" height="460" src="./img/fig20.png">
+</p>
+
+### Whereas visualising the output of two neurons is much harder:
+<p align="center">
+  <img width="460" height="460" src="./img/fig21.png">
+</p>
