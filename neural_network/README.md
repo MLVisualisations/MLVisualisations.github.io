@@ -1,7 +1,9 @@
 # Neural Networks
 
 ### A single neuron takes in multiple inputs (a vector) and produces one output (a scalar):
-![](./img/fig1.png)
+<p align="center">
+  <img width="460" height="460" src="./img/fig1.png">
+</p>
 ### Inside the neuron we take a linear combination of the inputs, add a bias, and apply a (nonlinear) activation function:
 ![](./img/fig2.png)
 ### The activation function behaves like a switch:
@@ -41,4 +43,4 @@
 ![](./img/fig18.png)
 ### And this is only a 2 dimensional problem. In practise, we use continous functions instead of the step function:
 ![](./img/fig19.png)
-### The region is no longer mapped to two distinct points, and so subsequent layers do a lot more. 
+### The region is no longer mapped to two distinct points, and so subsequent layers do a lot more.
