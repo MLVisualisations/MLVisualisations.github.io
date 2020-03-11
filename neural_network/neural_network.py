@@ -26,11 +26,11 @@ def step(x):
 #############
 # Figure 3
 #############
-fig, axes = plt.subplots(ncols=1, nrows=1)
+fig, axes = plt.subplots(ncols=1, nrows=1, figsize=(8, 2))
 axes.plot([-2, 0, 0, 2], [0, 0, 1, 1], 'k')
 plt.yticks(ticks = [0, 1], labels=['off', 'on'])
 plt.title('$\sigma(x)$')
-plt.savefig('img/fig3')
+plt.savefig('img/fig3', transparent=True)
 
 #############
 # Figure 4
@@ -62,7 +62,7 @@ axes[1, 0].title.set_text('$\sigma(2x - y)$')
 axes[1, 1].imshow(D4, extent = [-1, 1, -1, 1], cmap=plt.get_cmap('Greys'), aspect = 1)
 axes[1, 1].title.set_text('$\sigma(-x + 2y)$')
 fig.colorbar(pos, ax=axes[0:2], shrink=1)
-plt.savefig('img/fig4')
+plt.savefig('img/fig4', transparent=True)
 
 #############
 # Figure 5
@@ -94,7 +94,7 @@ axes[1, 0].title.set_text('$\sigma(2x - y + 0.4)$')
 axes[1, 1].imshow(D4, extent = [-1, 1, -1, 1], cmap=plt.get_cmap('Greys'), aspect = 1)
 axes[1, 1].title.set_text('$\sigma(-x + 2y + 0.4)$')
 fig.colorbar(pos, ax=axes[0:2], shrink=1)
-plt.savefig('img/fig5')
+plt.savefig('img/fig5', transparent=True)
 
 #############
 # Figure 6
@@ -113,7 +113,7 @@ plt.text(-0.5, 0.5, '[0, 0]')
 plt.text(-0.75, -0.25, '[0, 1]')
 axes.set_xlim([-1, 1])
 axes.set_ylim([-1, 1])
-plt.savefig('img/fig7')
+plt.savefig('img/fig7', transparent=True)
 
 #############
 # Figure 8
@@ -129,7 +129,7 @@ plt.text(0+0.05, 0+0.05, '[0, 0]')
 plt.text(0+0.05, 1+0.05, '[0, 1]')
 axes.set_xlim([-0.5, 1.5])
 axes.set_ylim([-0.5, 1.5])
-plt.savefig('img/fig8')
+plt.savefig('img/fig8', transparent=True)
 
 #############
 # Figure 9
@@ -151,7 +151,7 @@ plt.text(0+0.05, 1+0.05, '[0, 1]')
 plt.plot([-0.5, 1], [0.5, 1.5], 'k')
 axes.set_xlim([-0.5, 1.5])
 axes.set_ylim([-0.5, 1.5])
-plt.savefig('img/fig10')
+plt.savefig('img/fig10', transparent=True)
 
 #############
 # Figure 11
@@ -166,7 +166,7 @@ plt.text(-0.75, -0.25, '[0, 1]')
 axes.fill_between([-1, 0], [0, 0], [-1, 0])
 axes.set_xlim([-1, 1])
 axes.set_ylim([-1, 1])
-plt.savefig('img/fig11')
+plt.savefig('img/fig11', transparent=True)
 
 #############
 # Figure 12
@@ -182,7 +182,7 @@ for i, val in enumerate(label):
     else:
         axes.plot(x_coord[i], y_coord[i], 'bo')
 axes.set(xlim=(0, 1), ylim=(0, 1), aspect=1)
-plt.savefig('img/fig12')
+plt.savefig('img/fig12', transparent=True)
 
 #############
 # Figure 13
@@ -190,7 +190,7 @@ plt.savefig('img/fig12')
 plt.plot([0, 1], [0.98, 0.65], 'k')
 plt.plot([0.64, 0.64], [0, 1], 'k')
 plt.plot([0.2, 1], [1, 0.2], 'k')
-plt.savefig('img/fig13')
+plt.savefig('img/fig13', transparent=True)
 
 #############
 # Figure 14
@@ -203,7 +203,7 @@ plt.text(0.75, 0.9, '[1, 1, 1]')
 plt.text(0.3, 0.4, '[0, 0, 0]')
 plt.text(0.4, 0.9, '[1, 1, 0]')
 plt.text(0.07, 0.96, '[1, 0, 0]')
-plt.savefig('img/fig14')
+plt.savefig('img/fig14', transparent=True)
 
 #############
 # Figure 15
@@ -212,7 +212,7 @@ fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
 ax.scatter([0, 0, 0], [0, 1, 1], [1, 0, 1], c='b')
 ax.scatter([1, 0, 1, 1], [1, 0, 1, 0], [1, 0, 0, 0], c='r')
-plt.savefig('img/fig15')
+plt.savefig('img/fig15', transparent=True)
 
 #############
 # Figure 16
@@ -224,7 +224,7 @@ ax.set_xlim([0,1])
 ax.set_ylim([0,1])
 ax.set_zlim([0,1])
 ax.view_init(50, -89)
-plt.savefig('img/fig16')
+plt.savefig('img/fig16', transparent=True)
 
 #############
 # Figure 17
@@ -244,7 +244,7 @@ plt.plot([0.64, 0.64], [0, 1], 'k')
 plt.plot([0.2, 1], [1, 0.2], 'k')
 axes.fill_between([0.64, 1], [0.77, 0.65], [0, 0], color = 'blue', alpha=0.5)
 axes.fill_between([0.33, 0.64], [0.87, 0.77], [0.87, 0.56], color = 'blue', alpha=0.5)
-plt.savefig('img/fig17')
+plt.savefig('img/fig17', transparent=True)
 
 #############
 # Figure 18
@@ -265,7 +265,7 @@ plt.plot([0, 1], [0.18, 0.5], 'k')
 plt.plot([0, 1], [0.38, 0.28], 'k')
 plt.plot([0.45, 0.6], [0, 1], 'k')
 plt.plot([0.9, 0.4], [0, 1], 'k')
-plt.savefig('img/fig18')
+plt.savefig('img/fig18', transparent=True)
 
 #############
 # Figure 19
@@ -295,7 +295,7 @@ ax1.legend()
 ax2.legend()
 ax3.legend()
 ax4.legend()
-plt.savefig('img/fig19')
+plt.savefig('img/fig19', transparent=True)
 
 #############
 # Figure 20
@@ -323,21 +323,89 @@ axes[1, 0].title.set_text('$\sigma(2x - y + 0.4)$')
 axes[1, 1].imshow(D4, extent = [-4, 4, -4, 4], cmap=plt.get_cmap('Greys'), aspect = 1)
 axes[1, 1].title.set_text('$\sigma(-x + 2y + 0.4)$')
 fig.colorbar(pos, ax=axes[0:2], shrink=1)
-plt.savefig('img/fig20')
+plt.savefig('img/fig20', transparent=True)
 
 
 #############
 # Figure 21
 #############
-N = 50
+x_coord = [-0.9, -0.5, -0.77, -0.72, -0.28, -0.46, -0.32, 0.4, -0.95, -0.25, 0, 0.9]
+y_coord = [0.4, 0.5, 0.8, -0.05, 0.92, 0.2, 0.3, 0.6, -0.27, 0.98, -0.5, -0.4]
+label = [1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0]
+
+fig, axes = plt.subplots(ncols=1, nrows=1)
+for i, val in enumerate(label):
+    if val == 1:
+        axes.plot(x_coord[i], y_coord[i], 'ro')
+    else:
+        axes.plot(x_coord[i], y_coord[i], 'bo')
+axes.set(xlim=(-1, 1), ylim=(-1, 1), aspect=1)
+plt.savefig('img/fig21', transparent=True)
+
+#############
+# Figure 22
+#############
+fig, axes = plt.subplots(ncols=1, nrows=1)
+for i, val in enumerate(label):
+    if val == 1:
+        axes.plot(x_coord[i], y_coord[i], 'ro')
+    else:
+        axes.plot(x_coord[i], y_coord[i], 'bo')
+axes.plot([-0.25, -0.25], [-1, 1], 'k')
+axes.plot([-1, 1], [-0.25, -0.25], 'k')
+axes.set(xlim=(-1, 1), ylim=(-1, 1), aspect=1)
+plt.savefig('img/fig22', transparent=True)
+
+#############
+# Figure 23
+#############
+N = 64
 fig, (ax1, ax2) = plt.subplots(ncols=2, nrows=1, figsize=(8,4))
-for x in np.linspace(-4, 4, N):
-    for y in np.linspace(-4, 4, N):
-        ax1.plot(x, y, 'o', color=(x/8 + 0.5, y/8 +0.5, 0))
-ax1.plot([-4, 4], [-4, 4], 'k')
-ax1.plot([-4, 4], [2, -2], 'k')
-for x in np.linspace(-4, 4, N):
-    for y in np.linspace(-4, 4, N):
-        ax2.plot(sigmoid(2*x - y), sigmoid(x + y), 'o', color=(x/8 + 0.5, y/8 +0.5, 0))
-plt.suptitle('$[x, y] -> [\sigma(2x - y), \sigma(x + y)]$')
-plt.savefig('img/fig21')
+for i, x in enumerate(np.linspace(-1, 1, N)):
+    for j, y in enumerate(np.linspace(-1, 1, N)):
+        ax1.plot(x, y, 'o', color=(i/N, j/N, 0))
+ax1.plot([-0.25, -0.25], [-1, 1], 'k')
+ax1.plot([-1, 1], [-0.25, -0.25], 'k')
+for i, x in enumerate(np.linspace(-1, 1, N)):
+    for j, y in enumerate(np.linspace(-1, 1, N)):
+        ax2.plot(sigmoid(4*x + 1), sigmoid(4*y + 1), 'o', color=(x/2 + 0.5, y/2 +0.5, 0))
+plt.suptitle('$[x, y] -> [\sigma(4x + 1), \sigma(4y + 1)]$')
+plt.savefig('img/fig23', transparent=True)
+
+#############
+# Figure 24
+#############
+N = 64
+D = np.zeros([N, N])
+fig, (ax1, ax2) = plt.subplots(ncols=2, nrows=1, figsize=(8,4))
+for i, x in enumerate(np.linspace(-1, 1, N)):
+    for j, y in enumerate(np.linspace(-1, 1, N)):
+        xx = sigmoid(4*x + 1)
+        yy = sigmoid(4*y + 1)
+        ax1.plot(xx, yy, 'o', color=(x/2 + 0.5, y/2 +0.5, 0))
+        D[i, j] = 0.7*round(sigmoid(xx - yy + 0.5))
+ax1.plot([0, 0.5], [0.5, 1], 'k')
+ax2.imshow(np.flip(D.T, axis=0), cmap='Blues', vmin=0, vmax=1)
+ax2.axis('off')
+plt.savefig('img/fig24', transparent=True)
+
+#############
+# Figure 25
+#############
+D = np.zeros([N, N])
+fig, ax = plt.subplots(ncols=1, nrows=1, figsize=(8,4))
+for i, x in enumerate(np.linspace(-1, 1, N)):
+    for j, y in enumerate(np.linspace(-1, 1, N)):
+        xx = sigmoid(4*x + 1)
+        yy = sigmoid(4*y + 1)
+        D[i, j] = 0.7*round(sigmoid(xx - yy + 0.5))
+ax.imshow(np.flip(D.T, axis=0), cmap='Blues', vmin=0, vmax=1)
+
+for i, val in enumerate(label):
+    if val == 1:
+        ax.plot(32*(x_coord[i]+1), 64 - 32*(y_coord[i]+1), 'ro')
+    else:
+        ax.plot(32*(x_coord[i]+1), 64 - 32*(y_coord[i]+1), 'bo')
+
+ax.axis('off')
+plt.savefig('img/fig25', transparent=True)
