@@ -122,5 +122,5 @@
 
 ### A perfect divide. Trying to achieve such a classification would require more neurons if a step function was used. The sigmoid function can achieve anything a step function can by scaling the weights towards infinity:
 <p align="center">
-  <img width="600" height="460" src="./img/fig25.png">
+  <img width="600" height="300" src="./img/fig25.png">
 </p>
