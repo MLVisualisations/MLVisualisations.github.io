@@ -22,7 +22,7 @@ Image credit: https://peltarion.com/knowledge-center/documentation/modeling-view
 
 ### If we do an average pooling, then the layer can be represented by a single layer. If we wanted to do max pooling then we would have to introduce layer operations. Remember activation functions inside neurons are applied to a scalar, not a vector.
 <p align="center">
-  <img width="700" height="300" src="./img/pooling2.png">
+  <img width="900" height="300" src="./img/pooling2.png">
 </p>
 
 ## Residual blocks
@@ -34,4 +34,28 @@ Image credit: https://peltarion.com/knowledge-center/documentation/modeling-view
 ### Again this can be represented by standard neural network if we introduce neurons with the identifiy as an activation function (red) and edges with weight equal to one (red):
 <p align="center">
   <img width="500" height="300" src="./img/ResNet2.png">
+</p>
+
+## Recurrent Neural Network
+### Recurrent neural networks are commonly used for sequential data. A standard recurrent neural unit is usually drawn with a time loop like this:
+<p align="center">
+  <img width="400" height="300" src="./img/RNN1.png">
+</p>
+
+### But actually the time loop simulated depth and weight sharing. For example, the network can actually be represented as a standard neural network. The red arrows indicate weights of 1 and the blue and green arrows indicate shared weights. The red neurons have an identity activation function:
+<p align="center">
+  <img width="400" height="800" src="./img/RNN2.png">
+</p>
+
+### Unsuprisingly, RNNs suffer from the vanishing gradient problem as the networks become incredibly deep for long sequences.
+
+## LSTMs
+### One way to resolve the vanishing gradient problem is using an LSTM cell. The cell looks like this:
+<p align="center">
+  <img width="500" height="300" src="./img/LSTM1.png">
+</p>
+
+### An LSTM cell is more complicasted than a standard RNN and it requires a new operation, the elementwise product of the output of two neurons. This is represnted by two lines joining at a point. The green, yellow, grey and blue neurons represent the forget gate, input gate, cell update and output gate respectively. Again the red neurons and red arrows represent identity functions and weights equal to 1.
+<p align="center">
+  <img width="500" height="500" src="./img/LSTM2.png">
 </p>
