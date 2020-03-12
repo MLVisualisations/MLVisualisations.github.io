@@ -54,13 +54,13 @@ for i, x in enumerate(lx):
         if step(-x + 2*y):
             D4[i, j] = 1
 pos = axes[0, 0].imshow(D1, extent = [-1, 1, -1, 1], cmap=plt.get_cmap('Greys'), aspect = 1)
-axes[0, 0].title.set_text('$\sigma(x)$')
+axes[0, 0].title.set_text('$\sigma(x_1)$')
 axes[0, 1].imshow(D2, extent = [-1, 1, -1, 1], cmap=plt.get_cmap('Greys'), aspect = 1)
-axes[0, 1].title.set_text('$\sigma(x + y)$')
+axes[0, 1].title.set_text('$\sigma(x_1 + x_2)$')
 axes[1, 0].imshow(D3, extent = [-1, 1, -1, 1], cmap=plt.get_cmap('Greys'), aspect = 1)
-axes[1, 0].title.set_text('$\sigma(2x - y)$')
+axes[1, 0].title.set_text('$\sigma(2x_1 - x_2)$')
 axes[1, 1].imshow(D4, extent = [-1, 1, -1, 1], cmap=plt.get_cmap('Greys'), aspect = 1)
-axes[1, 1].title.set_text('$\sigma(-x + 2y)$')
+axes[1, 1].title.set_text('$\sigma(-x_1 + 2x_2)$')
 fig.colorbar(pos, ax=axes[0:2], shrink=1)
 plt.savefig('img/fig4', transparent=True)
 

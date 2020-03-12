@@ -90,7 +90,7 @@
   <img width="600" height="460" src="./img/fig18.png">
 </p>
 
-### So far we have only considered a 2 dimensional vector space. As the input dimension increases, so would the number of neurons required in the first later. In practise, we use continous functions instead of the step function. This allows backpropagation and makes susequent layers more meaningful as we no longer have distinct regions after the first layer. Examples of commonly used activation functions include:
+### So far we have only considered a 2 dimensional vector space. As the input dimension increases, so would the number of neurons required in the first layer. In practise, we use continous functions instead of the step function. This allows backpropagation and makes subsequent layers more meaningful as we no longer have distinct regions after the first layer. Examples of commonly used activation functions include:
 <p align="center">
   <img width="600" height="460" src="./img/fig19.png">
 </p>
