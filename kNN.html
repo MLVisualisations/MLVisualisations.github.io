@@ -60,11 +60,6 @@
     <section class="news-single nav-arrow-b">
       <div class="container">
         <div class="row">
-          <div class="col-sm-12">
-            <div class="news-img-box">
-              <img src="assets/img/slide-3.jpg" alt="" class="img-fluid">
-            </div>
-          </div>
           <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
 
             <div class="post-content color-text-a">
@@ -107,20 +102,43 @@
               </p>
 
               <p>
-                ### Outliers can damage the regions:
-                ![](./img/fig5.png)
-                ### We can remove them by considering more neighbour:
-                ![](./img/fig6.png)
-                ### But considering too many neighbours is also bad:
-                ![](./img/fig7.png)
-                ### The complexity of the algorithm increases as we add more datapoints:
-                ![](./img/fig8.png)
-                ### Which class does the green cross belong to?
-                ![](./img/fig9.png)
-                ### Well we first must compute all these distances:
-                ![](./img/fig10.png)
-                ### And large regions of the space may have no nearby neighbours!
-                ![](./img/fig11.png)
+                This strategy is sensitive to outliers, as can be seen in this green region:
+              </p>
+
+              <p align="center">
+                <img width="600" height="400" src="src/kNN/img/fig5.png">
+              </p>
+
+              <p>
+                One way to overcome this sensitivity is by considering more neighbours. As you can probably guess by the name, what if we consider the nearest k neighbours? We take the mode of their class and if there is a draw then we choose the closest. For example, if we consider three neighbours then the regions are classified like this:
+              </p>
+
+              <p align="center">
+                <img width="600" height="400" src="src/kNN/img/fig6.png">
+              </p>
+
+              <p>
+                A careful compromise is required as soo many neighbours can make the boundries fuzzy:
+              </p>
+
+              <p align="center">
+                <img width="600" height="400" src="src/kNN/img/fig7.png">
+              </p>
+
+              <p>
+                And clearly as the number of elements in our training set increases,
+              </p>
+
+              <p align="center">
+                <img width="600" height="400" src="src/kNN/img/fig8.png">
+              </p>
+
+              <p>
+                then we have to compute all these distances
+              </p>
+
+              <p align="center">
+                <img width="600" height="400" src="src/kNN/img/fig9.png">
               </p>
             </div>
           </div>
