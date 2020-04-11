@@ -62,40 +62,55 @@
               <p class="post-intro">
                 Intro   Intro    Intro    Intro    Intro    Intro    Intro
               </p>
-              <p>
-                Let's consider an example case for using the bubblesort algorithm.
+              <p> Here, we sort a one dimensional array using the bubblesort algorithm. This sorting scheme
+                   compares sizes of adjacent elements and with correct swaps leads to a sorted array after
+                   looping over it multiple times.
               </p>
-              <p>
-                Consider the following unsorted array: $$ x = [1, 4, 24, 21, 53, 102, 6, 42, 16, 99].$$
+                Let's consider an example case for using the bubblesort algorithm. Consider the array below which we label $x$:
               </p>
-              <p>
-              </p> To sort $x$ we can use the bubblesort algorithm. This sorting scheme
-                   compares adjacent elements for the entire array, eventually
-                   leading to a sorted array.
-
-              <p> Example:
+              <p align="center">
+                <img width="200" height="15" src="src/sorting/bubblesort/img/array.png">
               </p>
-              <p> (1) Compare adjacent elements in $x$ array and swap if value
-                      on the right is smaller. One pass of $x$ results in
-                      $$ x = [1, 4, 21, 24, 53, 6, 42, 16, 99, 102].$$
-
+              (1) Compare first two elements $1$ and $4$.
+              <p align="center">
+                <img width="200" height="90" src="src/sorting/bubblesort/img/arraystage1.png">
               </p>
-              <p> (2) Repeat (1) until all entries in $x$ are in order. Note that the first pass
-                      requires us to run over entries in $x$.
+              (2) Compare elements $4$ and $24$.
+              <p align="center">
+                <img width="200" height="90" src="src/sorting/bubblesort/img/arraystage2.png">
               </p>
-              <p>
-                       However, we know $102$ is in
-                      correct place by the first iteration of bubblesort. This means
-                      the next pass we only need to compare up to $99$, then up to
-                      $53$, and so forth.
-              <p>
-              <p> Repeating passes until the first entry results in:
-                 $$ x = [1, 4, 6, 16, 21, 24, 42, 53, 99, 102] $$
+              (3) Compare elements $24$ and $21$.
+              <p align="center">
+                <img width="200" height="90" src="src/sorting/bubblesort/img/arraystage3.png">
               </p>
-
-              Below are code snippets for the Bubblesort sorting algorithm written
-              in Python and C++.
-
+              (4) Compare elements $24$ and $53$.
+              <p align="center">
+                <img width="200" height="90" src="src/sorting/bubblesort/img/arraystage4.png">
+              </p>
+              (5) Compare elements $53$ and $102$.
+              <p align="center">
+                <img width="200" height="90" src="src/sorting/bubblesort/img/arraystage5.png">
+              </p>
+              (6) Compare elements $102$ and $6$.
+              <p align="center">
+                <img width="200" height="90" src="src/sorting/bubblesort/img/arraystage6.png">
+              </p>
+              (7) Compare elements $102$ and $42$.
+              <p align="center">
+                <img width="200" height="90" src="src/sorting/bubblesort/img/arraystage7.png">
+              </p>
+              (8) Compare elements $102$ and $16$.
+              <p align="center">
+                <img width="200" height="90" src="src/sorting/bubblesort/img/arraystage8.png">
+              </p>
+              (9) Compare elements $102$ and $99$.
+              <p align="center">
+                <img width="200" height="90" src="src/sorting/bubblesort/img/arraystage9.png">
+              </p>
+              (10) The array element $102$ is now sorted correctly. We proceed the steps (1-9) again, but only up to
+              $99$. We repeat this procedure until each element is in its correct location.
+              <p align="center">
+                <img width="200" height="15" src="src/sorting/bubblesort/arraystage10.png">
               </p>
               <p> Bubblesort python code: </p>
               <blockquote class="blockquote">
