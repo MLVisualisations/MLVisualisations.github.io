@@ -5,7 +5,7 @@ from scipy import stats
 plt.style.use('fast')
 
 #############
-# Figure 1
+# Initial
 #############
 x_coord = [0.90, 0.30, 0.71, 0.79, 0.50, 0.69, 0.61, 0.98, 0.76, 0.77, 0.22, 0.45, 0.57, 0.59, 0.80, 0.91, 0.99, 0.24, 0.4, 0.35]
 y_coord = [0.43, 0.40, 0.52, 0.63, 0.80, 0.35, 0.72, 0.04, 0.19, 0.27, 0.61, 0.85, 0.25, 0.46, 0.81, 0.70, 0.99, 0.30, 0.95, 0.48]
@@ -18,11 +18,6 @@ for i, val in enumerate(label):
     else:
         axes.plot(x_coord[i], y_coord[i], 'bo')
 axes.set(xlim=(0, 1), ylim=(0, 1), aspect=1)
-plt.savefig('img/fig1')
-
-#############
-# Figure 2
-#############
 axes.plot(0.5, 0.6, 'gx')
 plt.savefig('img/fig2')
 
@@ -30,21 +25,18 @@ plt.savefig('img/fig2')
 #############
 # Figure 3
 #############
-axes.annotate('', xy=(0.5,0.6), xytext=(0.50,0.80), arrowprops=dict(arrowstyle='<->', color='black'), va='center')
-axes.annotate('', xy=(0.5,0.6), xytext=(0.61,0.72), arrowprops=dict(arrowstyle='<->', color='black'), va='center')
-axes.annotate('', xy=(0.5,0.6), xytext=(0.59,0.46), arrowprops=dict(arrowstyle='<->', color='black'), va='center')
-axes.annotate('', xy=(0.5,0.6), xytext=(0.45,0.85), arrowprops=dict(arrowstyle='<->', color='black'), va='center')
-axes.annotate('', xy=(0.5,0.6), xytext=(0.35,0.48), arrowprops=dict(arrowstyle='<->', color='black'), va='center')
+for i, x in enumerate(x_coord):
+    axes.annotate('', xy=(0.5,0.6), xytext=(x, y_coord[i]), arrowprops=dict(arrowstyle='<->', color='black'), va='center')
 plt.savefig('img/fig3')
 
 #############
 # Figure 4
 #############
 fig, axes = plt.subplots(ncols=1, nrows=1)
-D = np.zeros([100, 100])
+D = np.zeros([1000, 1000])
 # Run through the space
-for i, x in enumerate(np.linspace(0, 1, 100)):
-    for j, y in enumerate(np.linspace(1, 0, 100)):
+for i, x in enumerate(np.linspace(0, 1, 1000)):
+    for j, y in enumerate(np.linspace(1, 0, 1000)):
         allocated_class = None
         min_dist = np.inf
         # Run through the training set
@@ -78,10 +70,10 @@ plt.savefig('img/fig5')
 # Figure 6
 #############
 fig, axes = plt.subplots(ncols=1, nrows=1)
-D = np.zeros([100, 100])
+D = np.zeros([1000, 1000])
 # Run through the space
-for i, x in enumerate(np.linspace(0, 1, 100)):
-    for j, y in enumerate(np.linspace(1, 0, 100)):
+for i, x in enumerate(np.linspace(0, 1, 1000)):
+    for j, y in enumerate(np.linspace(1, 0, 1000)):
         allocated_class = np.array([None, None, None])
         min_dist = np.array([np.inf, np.inf, np.inf])
         # Run through the training set
@@ -115,10 +107,10 @@ plt.savefig('img/fig6')
 # Figure 7
 #############
 fig, axes = plt.subplots(ncols=1, nrows=1)
-D = np.zeros([100, 100])
+D = np.zeros([1000, 1000])
 # Run through the space
-for i, x in enumerate(np.linspace(0, 1, 100)):
-    for j, y in enumerate(np.linspace(1, 0, 100)):
+for i, x in enumerate(np.linspace(0, 1, 1000)):
+    for j, y in enumerate(np.linspace(1, 0, 1000)):
         allocated_class = np.array([None, None, None, None, None])
         min_dist = np.array([np.inf, np.inf, np.inf, np.inf, np.inf])
         # Run through the training set

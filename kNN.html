@@ -70,7 +70,10 @@
                 K nearest neighbours is the simplest classification algorithm.
                 Given a similarity measure (i.e. distance measure), we classify a
                 new element as the mode of its k nearest neighbours in our training
-                set.
+                set. The easiest similarity measure to visualise is Euclidean distance,
+                i.e. the length of the straight line between two points. Throughout
+                the remainder of this post, we will use Euclidean distance, but keep
+                in mind that any similarity measure could be used.
               </p>
 
               <p>
@@ -88,6 +91,10 @@
                 This requires us to compute the distance between the green cross and all
                 other points in our training set.
               </p
+
+              <blockquote class="blockquote">
+            <script src="https://gist.github.com/StevenElsworth/148379af003d6103b1a5958eeb28d289.js"></script>
+              </blockquote>
 
               <p align="center">
                 <img width="600" height="400" src="src/kNN/img/fig3.png">
@@ -112,6 +119,10 @@
               <p>
                 One way to overcome this sensitivity is by considering more neighbours. As you can probably guess by the name, what if we consider the nearest k neighbours? We take the mode of their class and if there is a draw then we choose the closest. For example, if we consider three neighbours then the regions are classified like this:
               </p>
+
+              <blockquote class="blockquote">
+                <script src="https://gist.github.com/StevenElsworth/cf4a17a37f428736294cc454866f5b4b.js"></script>
+              </blockquote>
 
               <p align="center">
                 <img width="600" height="400" src="src/kNN/img/fig6.png">
