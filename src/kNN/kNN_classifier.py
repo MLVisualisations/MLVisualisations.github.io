@@ -2,7 +2,7 @@ import numpy as np
 np.random.seed(0)
 import matplotlib.pyplot as plt
 from scipy import stats
-plt.style.use('fast')
+plt.style.use('Solarize_Light2')
 
 #############
 # Initial
@@ -14,11 +14,11 @@ label = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
 fig, axes = plt.subplots(ncols=1, nrows=1)
 for i, val in enumerate(label):
     if val == 1:
-        axes.plot(x_coord[i], y_coord[i], 'ro')
+        axes.plot(x_coord[i], y_coord[i], 'k^')
     else:
-        axes.plot(x_coord[i], y_coord[i], 'bo')
+        axes.plot(x_coord[i], y_coord[i], 'ks')
 axes.set(xlim=(0, 1), ylim=(0, 1), aspect=1)
-axes.plot(0.5, 0.6, 'gx')
+axes.plot(0.5, 0.6, 'kx')
 plt.savefig('img/fig2')
 
 
@@ -53,17 +53,17 @@ for i, x in enumerate(np.linspace(0, 1, 1000)):
 
 for i, val in enumerate(label):
     if val == 1:
-        axes.plot(x_coord[i], y_coord[i], 'ro')
+        axes.plot(x_coord[i], y_coord[i], 'k^')
     else:
-        axes.plot(x_coord[i], y_coord[i], 'bo')
+        axes.plot(x_coord[i], y_coord[i], 'ks')
 
-axes.imshow(D, extent = [0, 1, 0, 1], cmap=plt.get_cmap('Pastel1'), aspect = 1)
+axes.imshow(D, extent = [0, 1, 0, 1], alpha=0.8, cmap=plt.get_cmap('cividis'), aspect = 1)
 plt.savefig('img/fig4')
 
 #############
 # Figure 5
 #############
-axes.plot([0.2, 0.4, 0.4, 0.2, 0.2], [0.3, 0.3, 0.5, 0.5, 0.3], 'g')
+axes.plot([0.2, 0.4, 0.4, 0.2, 0.2], [0.3, 0.3, 0.5, 0.5, 0.3], 'k')
 plt.savefig('img/fig5')
 
 #############
@@ -97,10 +97,10 @@ for i, x in enumerate(np.linspace(0, 1, 1000)):
 
 for i, val in enumerate(label):
     if val == 1:
-        axes.plot(x_coord[i], y_coord[i], 'ro')
+        axes.plot(x_coord[i], y_coord[i], 'k^')
     else:
-        axes.plot(x_coord[i], y_coord[i], 'bo')
-axes.imshow(D, extent = [0, 1, 0, 1], cmap=plt.get_cmap('Pastel1'), aspect = 1)
+        axes.plot(x_coord[i], y_coord[i], 'ks')
+axes.imshow(D, extent = [0, 1, 0, 1], alpha=0.8, cmap=plt.get_cmap('cividis'), aspect = 1)
 plt.savefig('img/fig6')
 
 #############
@@ -134,10 +134,10 @@ for i, x in enumerate(np.linspace(0, 1, 1000)):
 
 for i, val in enumerate(label):
     if val == 1:
-        axes.plot(x_coord[i], y_coord[i], 'ro')
+        axes.plot(x_coord[i], y_coord[i], 'k^')
     else:
-        axes.plot(x_coord[i], y_coord[i], 'bo')
-axes.imshow(D, extent = [0, 1, 0, 1], cmap=plt.get_cmap('Pastel1'), aspect = 1)
+        axes.plot(x_coord[i], y_coord[i], 'ks')
+axes.imshow(D, extent = [0, 1, 0, 1], alpha=0.8, cmap=plt.get_cmap('cividis'), aspect = 1)
 plt.savefig('img/fig7')
 
 #############
@@ -155,10 +155,10 @@ for i, val in enumerate(label):
         y = y_coord[i]+0.05*np.random.randn(1)
         if val == 1:
             class_1.append([x, y])
-            axes.plot(x, y, 'ro')
+            axes.plot(x, y, 'k^')
         else:
             class_2.append([x, y])
-            axes.plot(x, y, 'bo')
+            axes.plot(x, y, 'ks')
 axes.set(xlim=(0, 1), ylim=(0, 1), aspect=1)
 plt.savefig('img/fig8')
 
@@ -179,5 +179,5 @@ plt.savefig('img/fig10')
 #############
 # Figure 11
 #############
-axes.plot([0, 0.3, 0.3, 0, 0], [0.75, 0.75, 1, 1, 0.75], 'g')
+axes.plot([0, 0.3, 0.3, 0, 0], [0.75, 0.75, 1, 1, 0.75], 'k')
 plt.savefig('img/fig11')
