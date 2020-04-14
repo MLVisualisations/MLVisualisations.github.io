@@ -45,7 +45,7 @@
   <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
     <div class="container">
 
-      <a class="navbar-brand text-brand" href="index.html">ML<span class="color-b">Visualisations</span></a>
+      <a class="navbar-brand text-brand" href="index.html">Visual<span class="color-b">ML</span></a>
     </div>
   </nav>
   <!-- End Header/Navbar -->
@@ -67,20 +67,14 @@
                 K Nearest Neighbours
               </p>
               <p>
-                K nearest neighbours is the simplest classification algorithm.
-                Given a similarity measure (i.e. distance measure), we classify a
-                new element as the mode of its k nearest neighbours in our training
-                set. The easiest similarity measure to visualise is Euclidean distance,
-                i.e. the length of the straight line between two points. Throughout
-                the remainder of this post, we will use Euclidean distance, but keep
-                in mind that any similarity measure could be used.
+                K nearest neighbours is the simplest classification algorithm. Given a similarity measure (i.e. distance measure), we classify a new element as the mode of its k nearest neighbours in our training set. The easiest similarity measure to visualise is Euclidean distance, i.e., the length of the straight line between two points. Consequently, throughout the remainder of this post, we will use Euclidean distance, but please keep in mind that any similarity measure could be used.
               </p>
 
               <p>
                 Consider a training set of two dimensional vectors belonging to one
                 of two classes, red or blue. Which class does the green cross belong
                 to?
-              </p
+              </p>
 
               <p align="center">
                 <img width="600" height="400" src="src/kNN/img/fig2.png">
@@ -90,18 +84,22 @@
                 Possibly the most obvious solution is to look at its nearest neighbour.
                 This requires us to compute the distance between the green cross and all
                 other points in our training set.
-              </p
-
-              <blockquote class="blockquote">
-            <script src="https://gist.github.com/StevenElsworth/148379af003d6103b1a5958eeb28d289.js"></script>
-              </blockquote>
+              </p>
 
               <p align="center">
                 <img width="600" height="400" src="src/kNN/img/fig3.png">
               </p>
 
               <p>
-                Either way, it is quite clear that its nearest neighbour is a blue dot and so we can classify the point as belonging to the blue class. In fact we can classify the whole space using this idea.
+                A python gist containing the nearest neighbour classifier is given here:
+              </p>
+
+              <blockquote class="blockquote">
+            <script src="https://gist.github.com/StevenElsworth/148379af003d6103b1a5958eeb28d289.js"></script>
+              </blockquote>
+
+              <p>
+                The nearest neighbour to the green cross is a blue dot, and so we can classify the point as belonging to the blue class. In fact we can classify the whole space using this idea.
               </p>
 
               <p align="center">
@@ -109,7 +107,7 @@
               </p>
 
               <p>
-                This strategy is sensitive to outliers, as can be seen in this green region:
+                The nearest neighbour classifier is sensitive to outliers, as can be seen in this green region:
               </p>
 
               <p align="center">
@@ -117,19 +115,22 @@
               </p>
 
               <p>
-                One way to overcome this sensitivity is by considering more neighbours. As you can probably guess by the name, what if we consider the nearest k neighbours? We take the mode of their class and if there is a draw then we choose the closest. For example, if we consider three neighbours then the regions are classified like this:
-              </p>
+                One way to overcome this sensitivity is by considering more neighbours. As you can probably guess by the name, what if we consider the nearest k neighbours? We take the mode of their class and if there is a draw then we choose the closest. A gist containing the KNN algorithm is here:
 
               <blockquote class="blockquote">
                 <script src="https://gist.github.com/StevenElsworth/cf4a17a37f428736294cc454866f5b4b.js"></script>
               </blockquote>
+
+              <p>
+                If we consider three neighbours then the regions are classified like this:
+              </p>
 
               <p align="center">
                 <img width="600" height="400" src="src/kNN/img/fig6.png">
               </p>
 
               <p>
-                A careful compromise is required as soo many neighbours can make the boundries fuzzy:
+                A careful compromise is required as too many neighbours can make the boundries fuzzy:
               </p>
 
               <p align="center">
