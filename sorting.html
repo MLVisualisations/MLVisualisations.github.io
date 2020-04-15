@@ -65,20 +65,31 @@
               </p>
               <p>
                 This page is dedicated to sorting algorithms, which take arrays
-                and put them in order from smallest to largest. In particular, given an
-                array $$ x = [x_1, x_2, x_3, \cdots, x_n] $$
-                where $x_1$ are integer elements and unordered, then we apply a
-                sorting algorithm $Sort$ such that
-                $$ Sort(x) = [y_1, y_2, y_3, \cdots, y_n] $$
+                as inputs and output a new array which contains the same elements
+                but with the entries in order from smallest to largest.
+                That is, given an array
+                $$ x = [x_1, x_2, x_3, \dots, x_n] $$
+                of unordered elements $x_i$,
+                we apply a sorting algorithm Sort to obtain
+                $$ \mbox{Sort}(x) = [x_{i_{1}}, x_{i_{2}}, \dots, x_{i_{n}}] $$
                 where
-                $$ y_1 < y_2 < \cdots < y_n $$
-
-
-                Below are links to blog posts about different sorting strategies.
+                $$ x_{i_{1}} \leq x_{i_{2}} \leq \dots \leq x_{i_{n}}. $$
+                Here $ i_{1}, i_{2}, \dots, i_{n} $ is simply a reordering of
+                the original indices $ 1,2,\dots,n $.
+                For example, if
+                $$ x = [2, 5, 1, 8, 7], $$
+                then,
+                $$ \mbox{Sort}(x) = [1, 2, 5, 7, 8]. $$
               </p>
-              <p>1) <a href=bubblesort.html>BubbleSort</a> </p>
+              <p>
+                There are a great many sorting algorithms of varying levels of
+                efficiency and computational complexity. Below are links to blog
+                posts about a few different sorting strategies.
+              </p>
+              <p>1) <a href=bubblesort.html>Bubble Sort</a> </p>
               <p>2) <a href=quicksort.html>QuickSort</a> </p>
               <p>3) <a href=binarysearchsort.html>Binary Search</a> </p>
+              <p>4) <a href=mergesort.html>Merge Sort</a> </p>
 
             </div>
           </div>

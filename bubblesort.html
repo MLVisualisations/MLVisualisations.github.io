@@ -50,6 +50,10 @@
   </nav>
   <!-- End Header/Navbar -->
 
+  <!-- ======= Intro Section ======= -->
+  <div class="intro-single">
+  </div><!-- End Intro Section -->
+
   <main id="main">
 
     <!-- ======= Blog Single ======= -->
@@ -60,59 +64,95 @@
 
             <div class="post-content color-text-a">
               <p class="post-intro">
-                Intro   Intro    Intro    Intro    Intro    Intro    Intro
+                Bubble Sort
               </p>
-              <p> Here, we sort a one dimensional array using the bubblesort algorithm. This sorting scheme
-                   compares sizes of adjacent elements and with correct swaps leads to a sorted array after
-                   looping over it multiple times.
+              <p>
+                The Bubble Sort algorithm sorts an array by repeatedly passing
+                through it and comparing each two adjacent elements, swapping a
+                pair of elements if they are incorrectly ordered. At the end of
+                each pass through the array, the largest previously unsorted
+                element is in the correct position. The name Bubble Sort comes
+                from the comparison between elements rising through the array
+                and bubbles floating to the top of a drink.
               </p>
-                Let's consider an example case for using the bubblesort algorithm. Consider the array below:
+              <p>
+                Let's consider an example of the Bubble Sort algorithm being
+                used to sort an array.
+                Consider the array below:
               </p>
               <p align="center">
                 <img width="200" height="15" src="src/sorting/bubblesort/img/array.png">
               </p>
-              ($1$) Compare first two elements $1$ and $4$.
+              (1) Compare first two elements, $1$ and $4$.
               <p align="center">
                 <img width="200" height="90" src="src/sorting/bubblesort/img/arraystage1.png">
               </p>
-              ($2$) Compare elements $4$ and $24$.
+              (2) Compare elements $4$ and $24$.
               <p align="center">
                 <img width="200" height="90" src="src/sorting/bubblesort/img/arraystage2.png">
               </p>
-              ($3$) Compare elements $24$ and $21$.
+              (3) Compare elements $24$ and $21$.
               <p align="center">
                 <img width="200" height="90" src="src/sorting/bubblesort/img/arraystage3.png">
               </p>
-              ($4$) Compare elements $24$ and $53$.
+              (4) Compare elements $24$ and $53$.
               <p align="center">
                 <img width="200" height="90" src="src/sorting/bubblesort/img/arraystage4.png">
               </p>
-              ($5$) Compare elements $53$ and $102$.
+              (5) Compare elements $53$ and $102$.
               <p align="center">
                 <img width="200" height="90" src="src/sorting/bubblesort/img/arraystage5.png">
               </p>
-              ($6$) Compare elements $102$ and $6$.
+              (6) Compare elements $102$ and $6$.
               <p align="center">
                 <img width="200" height="90" src="src/sorting/bubblesort/img/arraystage6.png">
               </p>
-              ($7$) Compare elements $102$ and $42$.
+              (7) Compare elements $102$ and $42$.
               <p align="center">
                 <img width="200" height="90" src="src/sorting/bubblesort/img/arraystage7.png">
               </p>
-              ($8$) Compare elements $102$ and $16$.
+              (8) Compare elements $102$ and $16$.
               <p align="center">
                 <img width="200" height="90" src="src/sorting/bubblesort/img/arraystage8.png">
               </p>
-              ($9$) Compare elements $102$ and $99$.
+              (9) Compare elements $102$ and $99$.
               <p align="center">
                 <img width="200" height="90" src="src/sorting/bubblesort/img/arraystage9.png">
               </p>
-              ($10$) The array element $102$ is now sorted correctly. We proceed with steps (1-9) again, but only up to
-              $99$. We repeat this procedure until each element is in its correct location.
+              <p>
+              (10) The array element $102$ is now sorted correctly (it has
+              'bubbled' to the top). Note that this means it longer needs to be
+              considered in future passes.
+              </p>
               <p align="center">
                 <img width="200" height="15" src="src/sorting/bubblesort/img/arraystage10.png">
               </p>
-              Below are bubblesort programs which are written in Python and C++:
+              <p>
+                We then complete a second pass through the array (comparing
+                elements like we did in steps 1 to 9), but this time only up to
+                the penultimate element $99$.
+                Repeating this procedure, we produce an array in which each element
+                is in the correct order.
+              </p>
+              <p>
+                As described above, the Bubble Sort algorithm only stops when we
+                have completed $ n-1 $ passes through the array, where $ n $ is
+                the length of the array.
+                We could however stop the first time that a pass is completed
+                without a swap being made.
+              </p>
+              <p>
+                The Bubble Sort algorithm is not used in practical applications
+                as it is highly inefficient. In the worst case scenario, where
+                the array is in exact reverse order, it requires
+                $ \mathcal{O}(n^{2})$ operations (more precisely,
+                $\frac{n(n+1)}{2}$ swaps) to sort an array of length $ n $.
+                In fact, the <i>average</i> complexity of Bubble Sort is
+                $\mathcal{O}(n^{2})$.
+              </p>
+              <p>
+                Below are Bubble Sort programs which are written in Python and C++:
+              </p>
               <blockquote class="blockquote">
               <p class="mb-4"><link href="bubblesort.py" type="text/python"/>
 <script type="text/python" src="bubblesort.py"></script>
