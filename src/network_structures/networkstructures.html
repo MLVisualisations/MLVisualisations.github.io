@@ -66,20 +66,65 @@
                 Network Structures
               </p>
 
+              <p>
+                Many different neural network architectures exist. Unsuprisingly,
+                most of them are just standard deep neural networks with hardwired
+                weights or activation functions.
+              </p>
+
+              <p class="post-intro">
+                Convolutional Neural Networks (CNNs)
+              </p>
+
+              <p>
+                A convolution layer has proven to help neural networks when dealing
+                with images. The idea is that a single pixel should only be affected
+                by neighbouring pixels and not pixels far away. This would involve s
+                etting many weights to zero. This can be taken one step further by
+                enforcing many of the existing weights share values. An example of
+                the convolution operator is shown here:
+              </p>
+
               <p align="center">
-                <img width="800" height="300" src="./img/convolution1.png">
+                <img width="600" height="200" src="./img/convolution1.png">
+              </p>
+
+              <p>
+                Which can be represented by a standard neural network layer. The weights
+                are represented by the arrows. Two arrows of the same colour represent
+                the same weight and no arrow implies a zero weight.
               </p>
 
               <p align="center">
                 <img width="600" height="300" src="./img/convolution2.png">
               </p>
 
+              <p class="post-intro">
+                Pooling
+              </p>
+
+              <p>
+                Pooling is often used along side convolution layers. The idea is to
+                take a small block of the images and squish it into one value.
+              </p>
+
               <p align="center">
                 <img width="500" height="300" src="./img/pooling1.png">
               </p>
 
+              <p>
+                If we do an average pooling, then the layer can be represented
+                by a single layer. If we wanted to do max pooling then we would
+                have to introduce layer operations. Remember activation functions
+                inside neurons are applied to a scalar, not a vector.
+              </p>
+
               <p align="center">
-                <img width="900" height="300" src="./img/pooling2.png">
+                <img width="600" height="200" src="./img/pooling2.png">
+              </p>
+
+              <p class="post-intro">
+                Residual Blocks (ResNet)
               </p>
 
               <p align="center">
@@ -90,12 +135,20 @@
                 <img width="500" height="400" src="./img/ResNet2.png">
               </p>
 
+              <p class="post-intro">
+                Recurrent Neural Networks (RNNs)
+              </p>
+
               <p align="center">
                 <img width="400" height="300" src="./img/RNN1.png">
               </p>
 
               <p align="center">
                 <img width="400" height="800" src="./img/RNN2.png">
+              </p>
+
+              <p class="post-intro">
+                Long Short Term Memory Networks (LSTMs)
               </p>
 
               <p align="center">
