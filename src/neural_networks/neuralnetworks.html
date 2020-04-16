@@ -206,63 +206,88 @@
               </p>
 
               <p>
-                Lets consider a simple classification problem.
+                Lets consider a simple classification problem. We want to construct a
+                model which classifies any point in this two dimensional space as
+                either blue or red, based on this training data.
               </p>
 
               <p align="center">
-                <img width="600" height="400" src="s./img/fig12.png">
+                <img width="600" height="400" src="./img/fig12.png">
+              </p>
+
+              <p>
+                One way to do this would be k nearest neighbours. Another, as we have
+                previously seen is neural networks. The first layer of the neural network
+                partions regions. With three neurons, we could have this:
               </p>
 
               <p align="center">
                 <img width="600" height="400" src="./img/fig13.png">
               </p>
 
+              <p>
+                The regions have been designed such that no red or blue sample belongs
+                in the same region. The output of this single layer is a binary vector
+                of dimension three.
+              </p>
+
               <p align="center">
                 <img width="600" height="400" src="./img/fig14.png">
+              </p>
+
+              <p>
+                There points can be represented by the nodes of a three dimensional
+                hypercube, i.e., a cube.
               </p>
 
               <p align="center">
                 <img width="600" height="400" src="./img/fig15.png">
               </p>
 
+              <p>
+                An additional layer (a hyperplane in our new space) can separate thead
+                the red and blue nodes to complete our classifier.
+              </p>
+
               <p align="center">
                 <img width="600" height="400" src="./img/fig16.png">
+              </p>
+
+              <p>
+                As you can see, our neural network consisting of two layers, three
+                neurons on the first layer and one neuron on the second layer
+                can produce the following classification.
               </p>
 
               <p align="center">
                 <img width="600" height="400" src="./img/fig17.png">
               </p>
 
+              <p>
+                As the problem becomes more complex, you obviously need more neurons.
+              </p>
+
               <p align="center">
                 <img width="600" height="400" src="./img/fig18.png">
+              </p>
+
+              <p>
+                So far we have only considered using a step function as the activation function.
+                After all this is the function that makes the artificial neuron behave
+                most like a biological neuron. In practise, we use different function
+                which allow use to tune the weights of our model more easily.
+              </p>
+
+              <p>
+                Some of the most common activation functions include:
               </p>
 
               <p align="center">
                 <img width="600" height="400" src="./img/fig19.png">
               </p>
 
-              <p align="center">
-                <img width="600" height="400" src="./img/fig20.png">
-              </p>
-
-              <p align="center">
-                <img width="600" height="400" src="./img/fig21.png">
-              </p>
-
-              <p align="center">
-                <img width="600" height="400" src="./img/fig22.png">
-              </p>
-
-              <p align="center">
-                <img width="600" height="400" src="./img/fig23.png">
-              </p>
-
-              <p align="center">
-                <img width="600" height="400" src="./img/fig24.png">
-              </p>
-
-              <p align="center">
-                <img width="600" height="400" src="./img/fig25.png">
+              <p>
+                Discuss weight training and back prop!
               </p>
             </div>
           </div>
