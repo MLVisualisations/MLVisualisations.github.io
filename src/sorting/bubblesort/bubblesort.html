@@ -153,91 +153,42 @@
               </p>
 
 
-              Minumum Working Example:
+              Below is a Bubble Sort program written in:
 
-              <select id="mySelect" onchange="myFunction()">
-                <option value="Audi">Audi</option>
-                <option value="BMW" selected>BMW</option>
-                <option value="Mercedes">Mercedes</option>
-                <option value="Volvo">Volvo</option>
-              </select>
+              <div class="col-md-10 offset-md-1">
+                <ul class="nav nav-pills-a nav-pills mb-3 section-t3" id="pills-tab" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="pills-video-tab" data-toggle="pill" href="#pills-video" role="tab" aria-controls="pills-video" aria-selected="true">Python</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="pills-plans-tab" data-toggle="pill" href="#pills-plans" role="tab" aria-controls="pills-plans" aria-selected="false">C++</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="pills-map-tab" data-toggle="pill" href="#pills-map" role="tab" aria-controls="pills-map" aria-selected="false">MATLAB</a>
+                  </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                  <div class="tab-pane fade show active" id="pills-video" role="tabpanel" aria-labelledby="pills-video-tab">
+                    <blockquote class="blockquote">
+                    <p class="mb-4"><link href="bubblesort.py" type="text/python"/>
+                      <script type="text/python" src="bubblesort.py"></script>
+                      <script src="https://gist.github.com/alexhiles/b6c5d8445fd884badf8af61b4c4c30a8.js"></script>
+                    </blockquote>                  </div>
+                  <div class="tab-pane fade" id="pills-plans" role="tabpanel" aria-labelledby="pills-plans-tab">
+                    <blockquote class="blockquote">
+                      <p class="mb-4"><link href="bubblesort.py" type="text/python"/>
+                        <script type="text/python" src="bubblesort.py"></script>
+                        <script src="https://gist.github.com/alexhiles/902ebe8a12068a5bbf85001e3bf92402.js"></script>
+                      </blockquote>                  </div>
+                  <div class="tab-pane fade" id="pills-map" role="tabpanel" aria-labelledby="pills-map-tab">
+                    <blockquote class="blockquote">
+                      <p class="mb-4"><link href="bubblesort.m" type="text/matlab"/>
+                        <script type="text/matlab" src="bubblesort.m"></script>
+                        <script src="https://gist.github.com/jamesrynn/23c8e073267b2274434abc9ee14d8ef6.js"></script>
+                    </blockquote>                  </div>
+                </div>
+              </div>
 
-              <p>When you select a new car, a function is triggered which outputs the value of the selected car.</p>
-
-              <p id="demo"></p>
-
-              <script>
-              function myFunction() {
-                var x = document.getElementById("mySelect").value;
-                document.getElementById("demo").innerHTML = "You selected: " + x;
-              }
-              </script>
-
-
-
-
-
-
-              Below is a Bubble Sort program written in
-              <select id="myLanguage" onchange="selectLanguage()">
-                <option value="default" selected>Select one.</option>
-                <option value="python">Python</option>
-                <option value="cpp">C++</option>
-                <option value="matlab">MATLAB</option>
-              </select>
-
-              <p id="displayCode"></p>
-
-              <script>
-              function selectLanguage() {
-                var lang = document.getElementById("myLanguage").value;
-                if(lang==="python"){
-                  var text = pythonCode();
-                  document.getElementById("displayCode").innerHTML = text;
-                } else if(lang==="cpp"){
-                  document.getElementById("displayCode").innerHTML = "C++";
-                } else if(lang==="matlab"){
-                  document.getElementById("displayCode").innerHTML = "MATLAB";
-                }
-              }
-              </script>
-
-              <script>
-              function pythonCode() {
-                return "Python";
-              }
-              </script>
-
-
-              <script>
-              function selectLanguage_v2() {
-                var lang = document.getElementById("myLanguage").value;
-                var text = document.getElementById("lang").innerHTML;
-                document.getElementById("displayCode").innerHTML = text;
-              }
-              </script>
-
-
-
-              <p id="python">
-                <blockquote class="blockquote">
-                <p class="mb-4"><link href="bubblesort.py" type="text/python"/>
-                  <script type="text/python" src="bubblesort.py"></script>
-                  <script src="https://gist.github.com/alexhiles/b6c5d8445fd884badf8af61b4c4c30a8.js"></script>
-                </blockquote>
-              </p>
-
-              <blockquote class="blockquote">
-                <p class="mb-4"><link href="bubblesort.py" type="text/python"/>
-                  <script type="text/python" src="bubblesort.py"></script>
-                  <script src="https://gist.github.com/alexhiles/902ebe8a12068a5bbf85001e3bf92402.js"></script>
-                </blockquote>
-
-              <blockquote class="blockquote">
-                <p class="mb-4"><link href="bubblesort.m" type="text/matlab"/>
-                  <script type="text/matlab" src="bubblesort.m"></script>
-                  <script src="https://gist.github.com/jamesrynn/23c8e073267b2274434abc9ee14d8ef6.js"></script>
-              </blockquote>
 
             </div>
           </div>
