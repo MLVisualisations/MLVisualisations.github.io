@@ -64,32 +64,60 @@
 
             <div class="post-content color-text-a">
               <p class="post-intro">
-                Binary Search Sort
+                Binary Search
               </p>
               <p>
-                text text text text text text text text text text text text text text text text text text text text
-                text text text text text text text text text text text text text text text text text text text text
-                text text text text text text text text text text text text text text text text text text text text
-                text text text text text text text text text text text text text text text text text text text text
-                text text text text text text text text text text text text text text text text text text text text
-                text text text text text text text
+                The idea of a binary search is to find a target value in an array
+                which is sorted, lowest to highest.
               </p>
               <p>
-                text text text text text text text text text text text text text text text text text text text text
-                text text text text text text text text text text text text text text text text text text text text
-                text text text text text text text text text text text text text text text text text text text text
-                text text text text text text text text text text text text text text text text text text text text
-                text text text text text text text text text text text text text text text text text text text text
-                text text text text text text text
+              The binary search algorithm is a divide and conquer algorithm,
+              meaning we reduce to subsets of the array as certain criteria is
+              passed (will become more obvious by example).
+              </p>
+              <p>
+              Let us consider the example array from the sorting algorithms
+              demonstrations:
+              </p>
+              $$x = [1, 4, 6, 16, 21, 24, 42, 53, 99, 102].$$
+              <p>
+              The goal of binary search is to find some integer $y$ in $x$ by
+              dividing the array into smaller subarrays until the value is reached.
+              If the value is never reached, we say that $y \notin x$.
               </p>
 
+              To demonstrate this divide and conquer strategy, we will consider two examples.
+              First let us set $y = 6$.
               <p>
-                Below are Binary Search programs which are written in Python and C++:
+              <p> (1) Calculate length of vector $x$:  $length(x) = 10$.
+              </p>
+              <p> (2) Evaluate $x\left[\frac{length(x)}{2}\right]$ and compare with $y$.
+              </p>
+              <p> (3) Since $y < x\left[\frac{length(x)}{2}\right] (6 < 21)$, we consider the subarray $x_{s_1} = [1, 4, 6, 16]$.
+              </p>
+              <p> (4) Repeat (1-3) for subarray $x_{s_1}$. This results in $length(x_{s_1}) = 4$, then $x_{s_1}\left[\frac{length\left(x_{s_1}\right)}{2}\right] = 4$
+              </p>
+              <p> (5) Since $y > x_{s_1}\left[\frac{length\left(x_{s_1}\right)}{2}\right]$, we consider the subarray $x_{s_2} = [6, 16]$
+              </p>
+              <p> (6) Repeat (1-3) for subarray $x_{s_2}$. This results in $length(x_{s_2}) = 2$, then $x_{s_2}\left[\frac{length\left(x_{s_2}\right)}{2}\right] = 6$
+              </p>
+              <p> (7) Since $y = x_{s_2}\left[\frac{length\left(x_{s_2}\right)}{2}\right]$, we are done.
+              </p>
+
+              ** Steps above need to be clearer, will do this (Alex) **
+              <p>
+              <p>
+                Below are Binary Search algorithms which were written in Python and C++:
               </p>
               <blockquote class="blockquote">
-                Code goes here.
-              </blockquote>
-            </div>
+              <p class="mb-4"><link href="bubblesort.py" type="text/python"/>
+<script type="text/python" src="bubblesort.py"></script>
+<script src="https://gist.github.com/alexhiles/f1232d7db82c1d8c01f4d5d1ebc38820.js"></script>            </div>
+              <blockquote class="blockquote">
+                <p class="mb-4"><link href="bubblesort.py" type="text/python"/>
+              <script type="text/python" src="bubblesort.py"></script>
+<script src="https://gist.github.com/alexhiles/a2f057829ea4c22e0f5276efb69c7ed3.js"></script>              </blockquote>
+
           </div>
        </div>
       </div>
