@@ -151,24 +151,94 @@
                 In fact, the <i>average</i> complexity of Bubble Sort is
                 $\mathcal{O}(n^{2})$.
               </p>
-              <p>
-                Below are Bubble Sort programs which are written in Python, C++ and MATLAB:
+
+
+              Minumum Working Example:
+
+              <select id="mySelect" onchange="myFunction()">
+                <option value="Audi">Audi</option>
+                <option value="BMW" selected>BMW</option>
+                <option value="Mercedes">Mercedes</option>
+                <option value="Volvo">Volvo</option>
+              </select>
+
+              <p>When you select a new car, a function is triggered which outputs the value of the selected car.</p>
+
+              <p id="demo"></p>
+
+              <script>
+              function myFunction() {
+                var x = document.getElementById("mySelect").value;
+                document.getElementById("demo").innerHTML = "You selected: " + x;
+              }
+              </script>
+
+
+
+
+
+
+              Below is a Bubble Sort program written in
+              <select id="myLanguage" onchange="selectLanguage()">
+                <option value="default" selected>Select one.</option>
+                <option value="python">Python</option>
+                <option value="cpp">C++</option>
+                <option value="matlab">MATLAB</option>
+              </select>
+
+              <p id="displayCode"></p>
+
+              <script>
+              function selectLanguage() {
+                var lang = document.getElementById("myLanguage").value;
+                if(lang==="python"){
+                  var text = pythonCode();
+                  document.getElementById("displayCode").innerHTML = text;
+                } else if(lang==="cpp"){
+                  document.getElementById("displayCode").innerHTML = "C++";
+                } else if(lang==="matlab"){
+                  document.getElementById("displayCode").innerHTML = "MATLAB";
+                }
+              }
+              </script>
+
+              <script>
+              function pythonCode() {
+                return "Python";
+              }
+              </script>
+
+
+              <script>
+              function selectLanguage_v2() {
+                var lang = document.getElementById("myLanguage").value;
+                var text = document.getElementById("lang").innerHTML;
+                document.getElementById("displayCode").innerHTML = text;
+              }
+              </script>
+
+
+
+              <p id="python">
+                <blockquote class="blockquote">
+                <p class="mb-4"><link href="bubblesort.py" type="text/python"/>
+                  <script type="text/python" src="bubblesort.py"></script>
+                  <script src="https://gist.github.com/alexhiles/b6c5d8445fd884badf8af61b4c4c30a8.js"></script>
+                </blockquote>
               </p>
-              <blockquote class="blockquote">
-              <p class="mb-4"><link href="bubblesort.py" type="text/python"/>
-                <script type="text/python" src="bubblesort.py"></script>
-                <script src="https://gist.github.com/alexhiles/b6c5d8445fd884badf8af61b4c4c30a8.js"></script>
-              </blockquote>
+
               <blockquote class="blockquote">
                 <p class="mb-4"><link href="bubblesort.py" type="text/python"/>
-              <script type="text/python" src="bubblesort.py"></script>
-              <script src="https://gist.github.com/alexhiles/902ebe8a12068a5bbf85001e3bf92402.js"></script>
-              </blockquote>
+                  <script type="text/python" src="bubblesort.py"></script>
+                  <script src="https://gist.github.com/alexhiles/902ebe8a12068a5bbf85001e3bf92402.js"></script>
+                </blockquote>
+
               <blockquote class="blockquote">
                 <p class="mb-4"><link href="bubblesort.m" type="text/matlab"/>
                   <script type="text/matlab" src="bubblesort.m"></script>
                   <script src="https://gist.github.com/jamesrynn/23c8e073267b2274434abc9ee14d8ef6.js"></script>
               </blockquote>
+
             </div>
           </div>
        </div>
