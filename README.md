@@ -1,4 +1,4 @@
-# ML Visualisations
+![logo.png](logo.png)
 
 In this website we aim to explain a range of algorithms from both the Machine Learning world and the wider mathematical landscape underpinning the fields of Machine Learning and Data Science. In particular, we wish to portray these ideas visually, explaining the algorithms intuitively through images and simple explanations.
 
