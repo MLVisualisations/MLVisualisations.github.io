@@ -66,32 +66,41 @@
                 Binary Search
               </p>
               <p>
-                The idea of a binary search is to find a target value in an array
-                which is sorted, lowest to highest.
+              Binary search is an algorithm which searches an array of sorted integers for a target value and return its position if it is found.
               </p>
               <p>
-              The binary search algorithm is a divide and conquer algorithm,
-              meaning we reduce to subsets of the array as certain criteria is
-              passed (will become more obvious by example).
+              It is a divide and conquer algorithm, which in the binary search framework means the array is split up recursively
+              into smaller subarrays until the target value is either found or not found in the array.
+
+              <p>
+              The reduced array is found by checking whether the middle value of the current reduced array is greater, less than or equal to the target value.
+              Note that this is only possible if the array is sorted.
               </p>
               <p>
-              Let us consider the example array from the sorting algorithms
+              It is probably best explained by an example, so let's start!
+              <p>
+
+              Let's consider the example array from the sorting algorithms
               demonstrations:
               </p>
               $$x = [1, 4, 6, 16, 21, 24, 42, 53, 99, 102].$$
               <p>
-              The goal of binary search is to find some integer $y$ in $x$ by
+              In this framework, binary search aims to find some integer $y$ in $x$ by recursively
               dividing the array into smaller subarrays until the value is reached.
-              If the value is never reached, we say that $y \notin x$.
+              If the value is never reached, we say $y \notin x$.
+              </p>
+              For demonstration, let's set $y = 6$. This means we are trying to determine whether $x$ contains $y$ and if so, then where is it located.
+              <p>
+              *** NEED TO UPDATE FROM HERE ***
+              The recipe for one step of binary search is summarised below:
+              <p> (1) Calculate length of vector $x$ and compute: $$m = \frac{length(x)}{2}. $$
+              </p>
+              <p> (2) Evaluate $x[m]$ and compare with $y$
+              </p>
+              <p> (3) If $y < x[m]$, we consider the array indices $0, 1, \ldots, m - 1$
+                      If $y > x[m]$, we consider the array indices $m + 1, m + 2, \ldots, N$
               </p>
 
-              To demonstrate this divide and conquer strategy, we will consider two examples.
-              First let us set $y = 6$.
-              <p>
-              <p> (1) Calculate length of vector $x$:  $length(x) = 10$.
-              </p>
-              <p> (2) Evaluate $x\left[\frac{length(x)}{2}\right]$ and compare with $y$.
-              </p>
               <p> (3) Since $y < x\left[\frac{length(x)}{2}\right] (6 < 21)$, we consider the subarray $x_{s_1} = [1, 4, 6, 16]$.
               </p>
               <p> (4) Repeat (1-3) for subarray $x_{s_1}$. This results in $length(x_{s_1}) = 4$, then $x_{s_1}\left[\frac{length\left(x_{s_1}\right)}{2}\right] = 4$
