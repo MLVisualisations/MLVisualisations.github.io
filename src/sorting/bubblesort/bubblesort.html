@@ -66,24 +66,26 @@
                 Bubble Sort
               </p>
               <p>
-                The Bubble Sort algorithm sorts an array by repeatedly passing
-                through it and comparing each two adjacent elements, swapping a
-                pair of elements if they are incorrectly ordered. At the end of
-                each pass through the array, the largest previously unsorted
-                element is in the correct position.
+                The Bubble Sort algorithm sorts an array by comparing pairs of
+                adjacent elements. In one adjacent pair comparison, elements are swapped if
+                the number to the left is bigger than on the right.
+              </p>
+                By the end of one pass over the array, the largest previously unsorted
+                element is now in the correct position. This process is repeated until
+                all elements are in their correct location.
               </p>
               <p>
-                The name Bubble Sort comes from the comparison between elements rising through the array
-                and bubbles floating to the top of a drink.
               </p>
               <p>
-                Let's consider an example of the Bubble Sort algorithm being
-                used to sort an array.
+                Explaining how the bubble sort algorithm works is probably best
+                described by example. So, let's begin!
                 Consider the array below:
               </p>
               <p align="center">
                 <img width="200" height="15" src="./img/array.png">
               </p>
+              One pass of bubble sort can be described by the recipe below:
+              <p>
               (1) Compare first two elements, $1$ and $4$.
               <p align="center">
                 <img width="200" height="90" src="./img/arraystage1.png">
@@ -129,11 +131,10 @@
                 <img width="200" height="15" src="./img/arraystage10.png">
               </p>
               <p>
-                We then complete a second pass through the array (comparing
-                elements like we did in steps 1 to 9), but this time only up to
-                the penultimate element $99$.
-                Repeating this procedure, we produce an array in which each element
-                is in the correct order.
+                Future passes only consider elements which are unsorted, as there
+                is no need to compare already sorted elements. For example, a second
+                pass over our example array would compare elements up to $99$.
+                We apply passes over the array until it is sorted.
               </p>
               <p>
                 As described above, the Bubble Sort algorithm only stops when we
@@ -143,6 +144,9 @@
                 without a swap being made.
               </p>
               <p>
+                <p class="post-intro">
+                  Time Complexity
+                </p>
                 The Bubble Sort algorithm is not used in practical applications
                 as it is highly inefficient. In the worst case scenario, where
                 the array is in exact reverse order, it requires
@@ -152,9 +156,9 @@
                 $\mathcal{O}(n^{2})$.
               </p>
 
-
-              Below is a Bubble Sort program written in:
-
+              <p class="post-intro">
+                Algorithm Implementation
+              </p>
               <div class="col-md-10 offset-md-1">
                 <ul class="nav nav-pills-a nav-pills mb-3 section-t3" id="pills-tab" role="tablist">
                   <li class="nav-item">
